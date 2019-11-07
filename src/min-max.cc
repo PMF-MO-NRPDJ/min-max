@@ -66,6 +66,7 @@ int main(int argc, char** argv)
        double loc_min =  ...
        double loc_max = ...
 */
+       //auto phi = kut(p1,p2,p3);
        std::cout <<"Element " << count << " min kut = " <<  180*loc_min/M_PI 
                  << ", max kut = " << 180*loc_max/M_PI << "\n";
 
