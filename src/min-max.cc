@@ -31,7 +31,8 @@ double kut(Point const & p1, Point const & p2, Point const & p3)
 int main(int argc, char** argv)
 {
     const int dim = 2;
-    typedef Dune::UGGrid<dim> GridType;
+    using GridType = Dune::UGGrid<dim>;
+    using LeafGridView = ...;
      
     // UČITATI 2D MREŽU IZ GMSH DATOTEKE KOJA JE ZADANA KAO ARGUMENT KOMANDNE LINIJE.
     
@@ -51,7 +52,5 @@ int main(int argc, char** argv)
     Dune::VTKWriter<LeafGridView> vtkwriter(gridView);
     vtkwriter.write("poluvijenac");
 
-    delete p_grid;
- 
     return 0;
 }
